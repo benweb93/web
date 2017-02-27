@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> TODO.com</title>
+  <link rel="stylesheet"  type="text/css" href="todo.css">
+</head>
+<body>
+  <div class="section">
+    <div class="title">Todos</div>
+   <input type="text" placeholder="what to be done" class="input">
+  </div>
+  <ul class="element">
+  </ul>
+
+
+<script type="text/template" id="template">
+    <span>  <%= title %> </span>
+    <span class="box" >x</span>
+</script>
+<script type="text/template" id="stus-tpl">
+
+<div class="form">
+    <span class="show">
+      <div class="disp"><%=Code%></div>
+      <div class="edit">
+        <input type="text" name="Code" size="3" id="textScore" class="edited">
+      </div>
+    </span>
+  <span class="show">
+      <div class="disp"><%=Name%></div>
+      <div class="edit">
+        <input type="text" name="Name" size="3" id="textScore" class="edited">
+      </div>
+    </span>
+    <span class="show">
+      <div class="disp"><%=Score%></div>
+      <div class="edit">
+        <input type="text" name="Score" size="3" id="textScore" class="edited">
+      </div>
+    </span>
+
+</div>
+</script>
+<script src="jquery-2.1.4.js"></script>
+<script src="underscore.js"></script>
+<script src="backbone.js"></script>
+<script src="to_do.js" ></script>
+</body>
+</html>
