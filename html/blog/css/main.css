@@ -3,6 +3,16 @@ h1,h2,p{
   letter-spacing: 2px;
 opacity: 0.5;
   }
+  a{
+    text-decoration: none;
+    line-height: inherit;
+    display: inline-block;
+    height: inherit;
+    color: #fff;
+  }
+  /*a:hover{
+    color:black;
+  }*/
   ul{
     list-style: none;
     margin: 0;
@@ -42,10 +52,32 @@ nav   a{
   color: #fff;
 }
 nav .logo{
-float: left;
-font-size: 35px;
-padding-left: 10px;
+float : left;
+font-size : 35px;
+padding-left : 10px;
 }
+.sidebar{
+  position: fixed;
+  bottom : 0;
+  right : -400px;
+  top : 0;
+  width : 400px;
+  background: #607D8B;
+  transition: 0.3s;
+  }
+  .sidebar li{
+    padding-top:  60px;
+  }
+.mask{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+background: rgba(0,0,0,0.4) ;
+}
+
 .banner .inner{
   text-align: center;
   margin: 0 auto;
