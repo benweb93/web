@@ -10,9 +10,9 @@ opacity: 0.5;
     height: inherit;
     color: #fff;
   }
-  /*a:hover{
-    color:black;
-  }*/
+  a:hover{
+    background: silver;
+  }
   ul{
     list-style: none;
     margin: 0;
