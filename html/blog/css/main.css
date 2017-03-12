@@ -6,9 +6,11 @@ opacity: 0.5;
   a{
     text-decoration: none;
     line-height: inherit;
-    display: inline-block;
+    display: inline-block; /*display:inline-block才能使padding具体实现到a*/
     height: inherit;
     color: #fff;
+    width:100%;
+    padding: 20px;
   }
   a:hover{
     background: silver;
@@ -16,17 +18,19 @@ opacity: 0.5;
   ul{
     list-style: none;
     margin: 0;
+    padding: 0;
   }
   ul li{
     display: inline-block;
     padding: 5px;
+
   }
 header{
   background-image: url("img/1.jpg");
 }
 nav{
   background: #83B1AF;
-  height: 50px;
+  height: 80px;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -41,7 +45,7 @@ nav ul{
 }
 nav ul li,nav .logo{
   display: inline-block;
-  line-height: 50px;
+  line-height: 30px;
 
   margin-right: 20px;
 }
@@ -65,9 +69,10 @@ padding-left : 10px;
   width : 400px;
   background: #607D8B;
   transition: 0.3s;
+  z-index: 10;
   }
   .sidebar li{
-    padding-top:  60px;
+      width: 100%;
   }
 .mask{
   display: none;
@@ -79,18 +84,35 @@ padding-left : 10px;
 background: rgba(0,0,0,0.4) ;
 }
 
-.banner .inner{
+.banner .inner,.content .inner{
   text-align: center;
   margin: 0 auto;
   position: relative;
   top: 129px;
-  color: #aaa;
+  color: #607D8B;
 
 }
 .inner .text{
   letter-spacing: 8px;
   font-size: 30px;
-  color :#86B8B5;
+  color :#03a9f4;
+  margin: 30px;
+}
+.content{
+display: none;
+height: 500px;
+}
+.inner article {
+  color: #fff;
+  width:500px;
+  margin: 0 auto;
+  line-height: 33px;
+  display: -webkit-box;
+    overflow: hidden;
+    height: 200px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 button{
   border:none;

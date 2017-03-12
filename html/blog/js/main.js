@@ -2,8 +2,12 @@ $(function(){
   'use strict';
   var sidebar = $('.sidebar'),
       sidebar_trigger = $('.js_sidebar_trigger'),
+       logo=$('.logo'),
        mask = $('.mask'),
-      back_to_top = $('.back_to_top');
+       banner=$('.banner'),
+      back_to_top = $('.back_to_top'),
+      content=$('.content'),
+      pmsm=$('.personMessage');
 sidebar_trigger.on('click',function(){
     mask.fadeIn();
    sidebar.animate({
@@ -36,7 +40,18 @@ back_to_top.on('click',function(){
   'scrollTop' : 0
 },800);
 
-console.log('aa');})
+})
 
+pmsm.on('click',function(){
+  if(banner.fadeOut()){
+     banner.fadeOut();
+    content.fadeIn();
+  }
+});
+
+logo.on('click',function(){
+  banner.fadeIn();
+  content.fadeOut();
+})
 
 })
