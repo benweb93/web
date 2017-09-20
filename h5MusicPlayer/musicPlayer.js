@@ -3,8 +3,8 @@ var SimpleAudio = {
   init: function(){
                    this.listen();
                    this.loadAudio();
-
-                    i=0;
+                   i=0;
+                   display=1;
 },
 requestAudio : function(prom){
     audio = new Audio(prom) ;
@@ -29,6 +29,22 @@ audioPlay : function(){
 
     document.querySelector("#on").innerHTML = "播放";
      i = 0;
+  }
+},
+toggle:function(){
+
+  if (display == 1) {
+    $('#playBoard').fadeOut();
+    $('#toggle').removeClass('show');
+    $('#toggle').addClass('hide');
+      display = 0;
+
+
+  } else {
+    $('#playBoard').fadeIn();
+    $('#toggle').removeClass('hide');
+    $('#toggle').addClass('show');
+     display = 1;
   }
 },
 showTime : function(){
@@ -63,7 +79,8 @@ listen : function(){
   document.getElementById('on').addEventListener('click',SimpleAudio.audioPlay);
   document.getElementById('range_time').addEventListener('change',SimpleAudio.controlCurrent);
   document.getElementById('voice_line').addEventListener('change',SimpleAudio.controlCurrent);
-
+  document.getElementById('toggle').addEventListener('click',SimpleAudio.toggle);
+  // document.getElementById('playBoard').addEventListener('mouseout',SimpleAudio.hide);
   }
 
 
